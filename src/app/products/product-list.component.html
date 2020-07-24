@@ -50,7 +50,12 @@
             </td>
             <td>{{ product.releaseDate }}</td>
             <td>{{ product.price | currency: "USD":"symbol":"1.2-2" }}</td>
-            <td>{{ product.starRating }}</td>
+            <td>
+              <pm-star
+                [rating]="product.starRating"
+                (updatedRating)="onUpdatedRating($event)"
+              ></pm-star>
+            </td>
           </tr>
         </tbody>
       </table>

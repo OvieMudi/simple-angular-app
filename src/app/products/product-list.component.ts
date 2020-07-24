@@ -34,7 +34,7 @@ export class ProductListComponent implements OnInit {
       releaseDate: 'March 18, 2019',
       description: '15 gallon capacity rolling garden cart',
       price: 32.99,
-      starRating: 4.2,
+      starRating: 4.3,
       imageUrl: 'assets/images/garden_cart.png',
     },
   ];
@@ -61,6 +61,11 @@ export class ProductListComponent implements OnInit {
 
   toggleShowImage(): void {
     this.showImage = !this.showImage;
+  }
+
+  onUpdatedRating(event: string): void {
+    console.log(event);
+    this.pageTitle = `star rating: ${event}`;
   }
 
   ngOnInit(): void {
