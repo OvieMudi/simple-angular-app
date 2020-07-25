@@ -1,3 +1,16 @@
 <div class="card" *ngIf="product">
-  <div class="card-header">Page Tilte: {{ product.productName }}</div>
+  <div class="card-header">Page Tilte: {{ pageTitle }}</div>
+  <div class="card-body">-- card details here --</div>
+  <div class="card-footer">
+    <button
+      (click)="onBack()"
+      class="btn btn-outline--secondary"
+      style="width: 80px;"
+    >
+      <i class="fa fa-chevron-left"></i> Back
+    </button>
+  </div>
+</div>
+<div class="container" *ngIf="!product">
+  No content. But it works!
 </div>

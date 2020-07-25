@@ -44,12 +44,10 @@ export class ProductListComponent implements OnInit {
   }
 
   onUpdatedRating(event: string): void {
-    console.log(event);
-    this.pageTitle = `star rating: ${event}`;
+    this.pageTitle = `star rating: ${event}`; // TODO: update this
   }
 
   ngOnInit(): void {
-    console.log('OnInit');
     this.productService.getProducts().subscribe({
       next: (productArray: IProduct[]) => {
         this.products = productArray;
